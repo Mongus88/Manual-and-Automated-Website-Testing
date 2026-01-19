@@ -1,6 +1,6 @@
 # Manual-and-Automated-Website-Testing
 
-# Projekt megnevezése : ambringa.hu weboldal manuális és automata tesztelése és a talált hibák rögzítése
+Projekt megnevezése : ambringa.hu weboldal manuális és automata tesztelése és a talált hibák rögzítése
 
 Leírás : A weboldal fő funkcióinak a tesztelése. A tesztelés a regisztrációra, bejelentkezésre, keresésre, kosárra és vásárlásra vonatkozik.
 
