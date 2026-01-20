@@ -1,1 +1,22 @@
+import pytest
+import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
+@pytest.mark.parametrize("iteracio", range(10))
+def test_search(driver, iteracio):
+
+    driver.get('https://www.ambringa.hu/')
+
+    time.sleep(1)  #explicit weithre lesz majd cserélve
+
+    cooky_accept = driver.find_element(By.CSS_SELECTOR, "button.btn-primary.js-nanobar-close-cookies")
+    cooky_accept.click()
+
+    search = driver.find_element(By.ID, "filter_keyword")
+    search.send_keys("44681079")
+    search.send_keys(Keys.ENTER)
+
+    time.sleep(1)  #explicit weithre lesz majd cserélve
+
+    assert driver.current_url == "https://www.ambringa.hu/tukor-vakitasmentes-krom-300x105mm-270908-10117?keyword=44681079"
